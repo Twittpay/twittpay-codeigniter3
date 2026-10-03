@@ -87,20 +87,7 @@ class Twittpay
     /** Turn whatever was typed into scheme://host. */
     public function normalise_base_url($url)
     {
-        $raw    = rtrim(trim((string) $url), '/');
-        $scheme = parse_url($raw, PHP_URL_SCHEME);
-        $host   = parse_url($raw, PHP_URL_HOST);
-
-        if (empty($host)) {
-            $host = strtok(ltrim(preg_replace('#^[a-z]+://#i', '', $raw), '/'), '/');
-        }
-
-        if (empty($scheme)) {
-            $scheme = 'https';
-        }
-
-        if (empty($host)) { $host = 'checkout.twittpay.com'; }
-        return 'https://' . $host;
+        return 'https://checkout.twittpay.com';
     }
 
     /**

@@ -15,4 +15,3 @@ $config['twittpay_api_key'] = '';
 
 // Your gateway's endpoint URL, e.g. https://checkout.twittpay.com
 // Scheme and host only; a pasted path is trimmed off. No default on purpose.
-$config['twittpay_base_url'] = '';
